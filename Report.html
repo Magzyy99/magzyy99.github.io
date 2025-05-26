@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>WorkSync.</title>
+		<link rel="icon" type="image/png" href="images/logo1.png">
+		<meta name="description" content="Responsive HTML5 Template">
+		<meta name="author" content="webthemez">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+ 
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet"> 
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/animations.css" rel="stylesheet"> 
+		<link href="css/style.css" rel="stylesheet"> 
+		<link href="css/custom.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop --> 
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start --> 
+						<div class="header-left">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="#banner"><img id="logo" src="images/logo1.png" alt="Worthy"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="logo-section smooth-scroll">
+  <div class="brand app-title">
+    <a href="#banner">
+      <span class="regular">Work</span><span class="bold">Sync.</span>
+    </a>
+  </div>
+</div>
+
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start --> 
+						<div class="header-right">
+
+							<!-- main-navigation start --> 
+							<div class="main-navigation animated">
+
+								<!-- navbar start --> 
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li><a href="index.html">Dashboard</a></li>
+												<li><a href="project.html">Project</a></li>
+												
+												<li><a href="Task.html">Task</a></li>
+												<li><a href="Project Detail.html">Project Detail</a></li>
+												<li class="active"><a href="Report.html">Report</a></li>
+												<li id="auth-btn">
+													<a href="login.html" class="btn btn-primary" style="margin-top:8px; color:white;">Login</a>
+												  </li>											  
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+    <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .leaderboard-title {
+      font-family: 'Disket Mono', monospace;
+      font-weight: 700;
+      color: #102f76;
+    }
+    .badge-gold {
+      background-color: gold;
+      color: black;
+    }
+    .badge-silver {
+      background-color: silver;
+      color: black;
+    }
+    .badge-bronze {
+      background-color: #cd7f32;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="leaderboard-title mb-4">Leaderboard</h2>
+
+    <!-- Filter -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <label for="projectFilter" class="form-label">Filter Proyek</label>
+        <select id="projectFilter" class="form-select">
+          <option value="all">Semua Proyek</option>
+          <option value="Proyek A">Proyek A</option>
+          <option value="Proyek B">Proyek B</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="monthFilter" class="form-label">Filter Bulan</label>
+        <select id="monthFilter" class="form-select">
+          <option value="all">Semua Bulan</option>
+          <option value="2025-04">April 2025</option>
+          <option value="2025-05">Mei 2025</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Tabel Leaderboard -->
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Peringkat</th>
+            <th>Nama</th>
+            <th>Tugas Tepat Waktu</th>
+            <th>Total Tugas</th>
+            <th>Persentase</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody">
+          <!-- Data dummy akan dimasukkan via JS -->
+        </tbody>
+      </table>
+	  <div class="mt-4 text-center">
+  <p class="fw-semibold fst-italic text-muted">
+    Terus pertahankan konsistensi dan disiplin waktu untuk hasil kerja terbaik! 🚀
+  </p>
+    </div>
+  </div>
+
+  <script>
+    const dummyData = [
+      { name: 'Alex', onTime: 6, total: 6, project: 'Proyek A', month: '2025-05' },
+      { name: 'Azka', onTime: 9, total: 10, project: 'Proyek B', month: '2025-05' },
+      { name: 'Ody', onTime: 10, total: 12, project: 'Proyek A', month: '2025-04' },
+      { name: 'Aflah', onTime: 0, total: 10, project: 'Proyek B', month: '2025-05' }
+    ];
+
+    function renderLeaderboard(project = 'all', month = 'all') {
+      const tbody = document.getElementById('leaderboardBody');
+      tbody.innerHTML = '';
+
+      let filtered = dummyData.filter(item => 
+        (project === 'all' || item.project === project) &&
+        (month === 'all' || item.month === month)
+      );
+
+      // Hitung persentase dan urutkan
+      filtered = filtered.map(item => ({
+        ...item,
+        percent: item.total === 0 ? 0 : Math.round((item.onTime / item.total) * 100)
+      })).sort((a, b) => b.percent - a.percent);
+
+      // Render ke tabel
+      filtered.forEach((item, index) => {
+        let badge = '';
+        if (index === 0) badge = `<span class="badge badge-gold">🥇</span>`;
+        else if (index === 1) badge = `<span class="badge badge-silver">🥈</span>`;
+        else if (index === 2) badge = `<span class="badge badge-bronze">🥉</span>`;
+
+        tbody.innerHTML += `
+          <tr>
+            <td>${index + 1} ${badge}</td>
+            <td>${item.name}</td>
+            <td>${item.onTime}</td>
+            <td>${item.total}</td>
+            <td>${item.percent}%</td>
+          </tr>
+        `;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5">Tidak ada data untuk filter yang dipilih.</td></tr>`;
+      }
+    }
+
+    // Event filter
+    document.getElementById('projectFilter').addEventListener('change', () => {
+      renderLeaderboard(
+        document.getElementById('projectFilter').value,
+        document.getElementById('monthFilter').value
+      );
+    });
+    document.getElementById('monthFilter').addEventListener('change', () => {
+      renderLeaderboard(
+        document.getElementById('projectFilter').value,
+        document.getElementById('monthFilter').value
+      );
+    });
+
+    // Initial render
+    renderLeaderboard();
+  </script>
+
+
+    		<!-- JavaScript --> 
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+		
+		<script src="script.js"></script>
+
+	</body>
+</html>

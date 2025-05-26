@@ -1,0 +1,9 @@
+.foto-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.foto-profil {
+  width: 150px;
+  /* border-radius: 0; */ /* Kotak */
+}

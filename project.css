@@ -1,0 +1,24 @@
+/* css/project.css */
+
+.media {
+  margin-bottom: 25px;
+}
+
+.label {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.btn-sm {
+  margin-right: 5px;
+}
+
+.panel-body {
+  background-color: #fefefe;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}

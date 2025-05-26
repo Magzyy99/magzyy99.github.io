@@ -1,0 +1,18 @@
+<style>
+    .card {
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        color: white;
+    }
+    .bg-primary { background-color: #337ab7; }
+    .bg-success { background-color: #5cb85c; }
+    .bg-warning { background-color: #f0ad4e; }
+    .bg-info { background-color: #5bc0de; }
+    .bg-danger { background-color: #d9534f; }
+    .badge {
+        padding: 6px 12px;
+        border-radius: 10px;
+        color: white;
+    }
+</style>

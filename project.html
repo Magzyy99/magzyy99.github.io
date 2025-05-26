@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>WorkSync.</title>
+    <link rel="icon" type="image/png" href="images/logo1.png">
+		<meta name="description" content="Responsive HTML5 Template">
+		<meta name="author" content="webthemez">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+ 
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet"> 
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/animations.css" rel="stylesheet"> 
+		<link href="css/style.css" rel="stylesheet"> 
+		<link href="css/custom.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/project.css">
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop --> 
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start --> 
+						<div class="header-left">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="#banner"><img id="logo" src="images/logo1.png" alt="Worthy"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="logo-section smooth-scroll">
+								  <div class="brand app-title">
+    <a href="#banner">
+      <span class="regular">Work</span><span class="bold">Sync.</span>
+    </a>
+  </div>
+</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start --> 
+						<div class="header-right">
+
+							<!-- main-navigation start --> 
+							<div class="main-navigation animated">
+
+								<!-- navbar start --> 
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li><a href="index.html">Dashboard</a></li>
+												<li class="active"><a href="#Project">Project</a></li>
+												
+												<li><a href="Task.html">Task</a></li>
+												<li><a href="Project Detail.html">Project Detail</a></li>
+												<li><a href="Report.html">Report</a></li>
+												<li id="auth-btn">
+													<a href="login.html" class="btn btn-primary" style="margin-top:8px; color:white;">Login</a>
+												  </li>											  
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+   <section class="container" style="margin-top:120px;">
+    <h2 class="text-center">Daftar Proyek</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <!-- Proyek 1 -->
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Project A</h4>
+                    <p>Redesign website perusahaan. Fokus pada UI/UX dan kecepatan.</p>
+                    <span class="label label-warning">Ongoing</span>
+                    <p><small>Mulai: 10 Jan 2025 • Deadline: 10 Feb 2025</small></p>
+                    <a href="Project Detail.html" class="btn btn-primary btn-sm">Detail</a>
+                    <a href="#" class="btn btn-default btn-sm btn-edit-proyek">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Proyek 2 -->
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Project B</h4>
+                    <p>Pengembangan aplikasi mobile Android dan iOS.</p>
+                    <span class="label label-success">Selesai</span>
+                    <p><small>Mulai: 01 Des 2024 • Selesai: 01 Jan 2025</small></p>
+                    <a href="Project Detail.html" class="btn btn-primary btn-sm">Detail</a>
+                    <a href="#" class="btn btn-default btn-sm btn-edit-proyek">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                </div>
+            </div>
+            <hr>
+
+			<div id="daftarProyek"></div>
+
+            <!-- Tambahkan proyek lain sesuai kebutuhan -->
+			 <div class="text-right" style="margin-bottom: 15px;">
+  <button class="btn btn-success" data-toggle="modal" data-target="#modalTambahProyek">
+    <i class="fa fa-plus"></i> Tambah Proyek
+  </button>
+</div>
+
+
+<div class="modal fade" id="modalTambahProyek" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form id="projectForm">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="modalLabel">Tambah Proyek</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="namaProyek">Nama Proyek</label>
+            <input type="text" class="form-control" id="namaProyek" required>
+          </div>
+          <div class="form-group">
+            <label for="deskripsiProyek">Deskripsi</label>
+            <textarea class="form-control" id="deskripsiProyek" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="statusProyek">Status</label>
+            <select class="form-control" id="statusProyek">
+              <option value="Ongoing">Ongoing</option>
+              <option value="Selesai">Selesai</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEditStatus" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form id="editStatusForm">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="modalLabel">Edit Status Proyek</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="editStatus">Status</label>
+            <select class="form-control" id="editStatus">
+              <option value="Ongoing">Ongoing</option>
+              <option value="Selesai">Selesai</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="hidden" id="currentStatusSpan"> <!-- referensi elemen status -->
+          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+
+    		<!-- JavaScript --> 
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+		
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+		
+		<script src="script.js"></script>
+
+<script>
+  document.getElementById('projectForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nama = document.getElementById('namaProyek').value;
+    const deskripsi = document.getElementById('deskripsiProyek').value;
+    const status = document.getElementById('statusProyek').value;
+
+    const proyekHTML = `
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">${nama}</h4>
+      <p>${deskripsi}</p>
+      <p>
+        <span class="label label-${status === 'Selesai' ? 'success' : 'warning'}">${status}</span>
+      </p>
+      <p>
+        <a href="#" class="btn btn-default btn-sm">Edit</a>
+        <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+      </p>
+    </div>
+  </div>
+  <hr>
+`;
+    document.getElementById('daftarProyek').insertAdjacentHTML('afterbegin', proyekHTML);
+
+    // Reset dan tutup modal
+    document.getElementById('projectForm').reset();
+    $('#modalTambahProyek').modal('hide');
+  });
+</script>
+
+<script>
+  // Saat klik tombol edit status
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('btn-edit-proyek')) {
+      e.preventDefault();
+
+      // Ambil elemen status <span>
+      const statusSpan = e.target.closest('.media-body').querySelector('span.label');
+      const currentStatus = statusSpan.textContent;
+
+      // Set status di dropdown
+      document.getElementById('editStatus').value = currentStatus;
+      document.getElementById('currentStatusSpan').value = ''; // reset
+      document.getElementById('currentStatusSpan').dataset.target = JSON.stringify({
+        labelClass: statusSpan.className,
+        container: statusSpan.closest('.media-body').innerHTML,
+      });
+
+      // Simpan referensi DOM untuk update nanti
+      document.getElementById('currentStatusSpan')._targetElement = statusSpan;
+
+      $('#modalEditStatus').modal('show');
+    }
+  });
+
+  // Saat form disubmit
+  document.getElementById('editStatusForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const newStatus = document.getElementById('editStatus').value;
+    const span = document.getElementById('currentStatusSpan')._targetElement;
+
+    // Ganti teks dan class label
+    span.textContent = newStatus;
+    span.className = 'label ' + (newStatus === 'Selesai' ? 'label-success' : 'label-warning');
+
+    $('#modalEditStatus').modal('hide');
+  });
+</script>
+
+
+
+	</body>
+
+</html>
